@@ -15,13 +15,13 @@ local default_config = {
   use_console = true,
 
   -- Should highlighting be used in console (using echohl)
-  highlights = true,
+  highlights = false,
 
   -- Should write to a file
-  use_file = true,
+  use_file = false,
 
   -- Any messages above this level will be logged.
-  level = "trace",
+  level = "warn",
 
   -- Level configuration
   modes = {

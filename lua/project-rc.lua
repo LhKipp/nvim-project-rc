@@ -1,11 +1,11 @@
 local v = vim
 local M = {}
-local log = require('project_rc.log')
+local log = require('project-rc.log')
 
 local function defaultConfig()
     return {
         config_file_name = ".nvimrc.lua",
-        projects = { -- The projects for which to source a local config file
+        projects = { -- The projects for which sourcing a local config file is allowed
             -- "/home/user/repos/my_project"
         } 
     }
@@ -34,7 +34,7 @@ function M.setup(options)
     v.cmd([[
         " augroup project_rc
             " autocmd!
-            au DirChanged * lua require('project_rc').onDirChanged()
+            au DirChanged * lua require('project-rc').onDirChanged()
         " augroup END
     ]])
     M.onDirChanged() -- Call once for initial start cwd, which is not transmitted by autocmd
