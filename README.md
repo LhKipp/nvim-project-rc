@@ -1,5 +1,8 @@
 # nvim-project-rc - Yet another project configuration plugin 
 
+> [!NOTE]
+> This plugin is discontinued in favour of nvims 0.9 undeprecated `exrc` option.
+
 While loading of directory local configuration files is possible via the `exrc` option, it does not allow to do so only for whitelisted directories. Any `.exrc` file will be sourced. Thats a security concern.
 
 This plugin loads `.exrc` files, if the current working directory (cwd) contains one and the cwd is whitelisted.
